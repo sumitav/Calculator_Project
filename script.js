@@ -47,10 +47,10 @@ for (var i = 0; i < buttons.length; i++) {
             display.textContent += value;
         }
     });
-    buttons[i].addEventListener('keypress', function (event) {
-        var value=48-event.keyCode;
-        console.log(event.keyCode);
-        display.textContent+=event.keyCode;
-       });
-
 }
+document.addEventListener('keypress',function(event)
+{
+    var value=event.keyCode-48;
+    display.textContent+=value;
+}
+);
